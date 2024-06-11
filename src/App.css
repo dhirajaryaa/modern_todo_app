@@ -44,8 +44,8 @@
   all: unset;
   padding: 3px 8px;
   font-size: 0.9rem;
-  background-color: var(--focus-light);
-  border: 1px solid var(--gray-light);
+  background-color: var(--btn-4);
+  border: 1px solid var(--btn-4);
   border-radius: 3px;
   color: var(--focus-light);
   font-weight: 400;
@@ -122,6 +122,11 @@
   align-items: center;
   justify-content: space-between;
   margin: 0.5rem 0;
+}
+.warper .task-container .task-list .task-box p{
+  width: 100%;
+  font-size: 1rem;
+  text-align: left;
 }
 .warper .task-container .task-list .task-box .box .tags {
   display: flex;
