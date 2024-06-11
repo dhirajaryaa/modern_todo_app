@@ -1,0 +1,183 @@
+.container {
+  max-width: 1480px;
+  width: 100%;
+  height: 100%;
+  min-height: calc(100vh - 16px);
+  overflow-x: hidden;
+  background-color: var(--body-bg-light);
+}
+.container .warper {
+  width: 100%;
+  text-align: center;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: transparent;
+}
+.container .warper h1 {
+  font-size: 2rem;
+}
+.container .warper .header {
+  width: 50%;
+  margin: auto;
+  padding: 1rem 1.5rem;
+  color: var(--font-color-light);
+}
+.container .warper .header input {
+  width: 100%;
+  border: 1px solid var(--gray-light);
+  background-color: var(--focus-light);
+  border-radius: 0.2rem;
+  padding: 8px 12px;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 400;
+  color: inherit;
+}
+.container .warper .header .filtered-menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+}
+.btn {
+  all: unset;
+  padding: 3px 8px;
+  font-size: 0.9rem;
+  background-color: var(--focus-light);
+  border: 1px solid var(--gray-light);
+  border-radius: 3px;
+  color: var(--focus-light);
+  font-weight: 400;
+  margin: 0.2rem 0.3rem;
+}
+.btn.html {
+  background-color: var(--btn-2);
+  border: 1px solid var(--btn-2);
+}
+.btn.css {
+  background-color: var(--btn-1);
+  border: 1px solid var(--btn-1);
+}
+.btn.javascript {
+  background-color: var(--btn-3);
+  border: 1px solid var(--btn-3);
+}
+.btn.react {
+  background-color: var(--btn-5);
+  border: 1px solid var(--btn-5);
+}
+.header .action-btn select {
+  padding: 3px 20px;
+  background-color: var(--focus-light);
+  border: 1px solid var(--gray-light);
+  border-radius: 3px;
+  font-weight: 500;
+  margin: 0.2rem 0.3rem;
+}
+.header .action-btn .submit {
+  padding: 5px 10px;
+  font: 1.1rem;
+  font-weight: 400;
+  background-color: var(--btn-3);
+  border: 1px solid var(--btn-3);
+  color: var(--body-bg-light);
+  border-radius: 3px;
+}
+/* .task container  */
+.warper .task-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2rem auto;
+  gap: 2rem;
+  width: 90%;
+}
+.warper .task-container .task-list h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  margin: 0 0 0.6rem;
+}
+.warper .task-container .task-list .task-box {
+  border: 1px solid var(--gray-light);
+  border-radius: 7px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 20rem;
+  transition: all 0.4s;
+  margin-bottom: 1rem;
+}
+.warper .task-container .task-list .task-box:hover {
+  background-color: var(--focus-light);
+}
+.warper .task-container .task-list .task-box .box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+}
+.warper .task-container .task-list .task-box .box .tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  /* gap: 0.2rem; */
+}
+.warper .task-container .task-list .task-box .box .tags .btn {
+  margin: 0.3rem;
+}
+.warper .task-container .task-list .task-box .box .del-btn .delete {
+  all: unset;
+  width: 30px;
+}
+.warper .task-container img {
+  width: 20px;
+  height: 20px;
+}
+@media only screen and (max-width: 1180px) {
+  .warper .task-container {
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+  .container .warper .header .filtered-menu {
+    flex-direction: column;
+    margin: 0.9rem;
+    gap: 1.3rem;
+  }
+}
+@media only screen and (max-width: 744px) {
+  .container .warper .header {
+    width: 80%;
+    padding: 1rem;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .warper .task-container {
+   margin: 0.5rem 0;
+  }
+  .warper .task-container .task-list{
+    margin:  auto;
+  }
+  .container .warper .header {
+    width: 100%;
+  }
+  .container .warper .header .filtered-menu {
+    flex-direction: column;
+    margin: 0.7rem 0;
+    gap: 1.3rem;
+    width: auto;
+  }
+  .container .warper .header .filtered-menu .btn {
+    margin: 0.2rem;
+  }
+}

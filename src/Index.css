@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  :root {
+    --body-bg-dark: #232a3a;
+    --body-bg-light: #ffffff;
+    --font-color-light: #202020;
+    --focus-light: #faf9fa;
+    --gray-light: #dfdfdf;
+    --btn-1: #ff7f50;
+    --btn-2: #3cb371;
+    --btn-3: #1e90ff;
+    --btn-4: #daa520;
+    --btn-5: #ba55d3;
+  }
