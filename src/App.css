@@ -25,7 +25,7 @@
 .container .warper .header input {
   width: 100%;
   border: 1px solid var(--gray-light);
-  background-color: var(--fouce-light);
+  background-color: var(--focus-light);
   border-radius: 0.2rem;
   padding: 8px 12px;
   outline: none;
@@ -33,7 +33,7 @@
   font-weight: 400;
   color: inherit;
 }
-.container .warper .header .filterd-menu {
+.container .warper .header .filtered-menu {
   width: 100%;
   display: flex;
   align-items: center;
@@ -44,10 +44,10 @@
   all: unset;
   padding: 3px 8px;
   font-size: 0.9rem;
-  background-color: var(--fouce-light);
+  background-color: var(--focus-light);
   border: 1px solid var(--gray-light);
   border-radius: 3px;
-  color: var(--fouce-light);
+  color: var(--focus-light);
   font-weight: 400;
   margin: 0.2rem 0.3rem;
 }
@@ -69,7 +69,7 @@
 }
 .header .action-btn select {
   padding: 3px 20px;
-  background-color: var(--fouce-light);
+  background-color: var(--focus-light);
   border: 1px solid var(--gray-light);
   border-radius: 3px;
   font-weight: 500;
@@ -113,7 +113,7 @@
   margin-bottom: 1rem;
 }
 .warper .task-container .task-list .task-box:hover {
-  background-color: var(--fouce-light);
+  background-color: var(--focus-light);
 }
 .warper .task-container .task-list .task-box .box {
   width: 100%;
@@ -149,7 +149,7 @@
     align-items: flex-start;
     justify-content: space-evenly;
   }
-  .container .warper .header .filterd-menu {
+  .container .warper .header .filtered-menu {
     flex-direction: column;
     margin: 0.9rem;
     gap: 1.3rem;
@@ -171,13 +171,13 @@
   .container .warper .header {
     width: 100%;
   }
-  .container .warper .header .filterd-menu {
+  .container .warper .header .filtered-menu {
     flex-direction: column;
     margin: 0.7rem 0;
     gap: 1.3rem;
     width: auto;
   }
-  .container .warper .header .filterd-menu .btn {
+  .container .warper .header .filtered-menu .btn {
     margin: 0.2rem;
   }
 }
