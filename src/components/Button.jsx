@@ -2,21 +2,21 @@ import React from "react";
 
 function Button({ tagName, selectTag, checkTags }) {
   const tagStyle = {
-    html: { backgroundColor: "#ff7f50" },
-    css: { backgroundColor: "#1e90ff" },
-    javascript: { backgroundColor: "#f0c24d" },
-    react: { backgroundColor: "#3cb371" },
-    git: { backgroundColor: "#ba55d3" },
+    study: { backgroundColor: "#ff7f50" },
+    home: { backgroundColor: "#1e90ff" },
+    health: { backgroundColor: "#f0c24d" },
+    financial: { backgroundColor: "#3cb371" },
+    hobbies: { backgroundColor: "#ba55d3" },
     default: { backgroundColor: "#232a3a" },
   };
   return (
     <button
       type="button"
-      style={checkTags ? tagStyle[tagName] : tagStyle.default}
-      className={`btn ${tagName}`}
+      style={checkTags ? tagStyle[tagName.toLowerCase()] : tagStyle.default}
+      className={`btn ${tagName.toLowerCase()}`}
       onClick={() => selectTag(tagName)}
     >
-      {tagName.toUpperCase()}
+      {tagName}
     </button>
   );
 }

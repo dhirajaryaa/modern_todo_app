@@ -6,28 +6,30 @@ import TaskList from "./components/TaskList";
 function App() {
   const [tasks, setTasks] = useState([]);
 
-  const handleRemoveTask = (index)=>{
-    console.log(index);
-    const removeTask = tasks.filter((item,i)=> i !== index);
-
-    setTasks(removeTask)
-    console.log(tasks);
-  }
+const handleRemoveTask = (index) => {
+  const newTasks = tasks.filter((item, i) => i !== index);
+  setTasks(newTasks);
+};
 
 useEffect(() => {
+  // Get tasks from localStorage when the component mounts
   const storedTasks = JSON.parse(localStorage.getItem("task"));
-  if (Array.isArray(storedTasks) || tasks.length) {
+  if (Array.isArray(storedTasks) && storedTasks.length) {
     setTasks(storedTasks);
   }
-  console.log(tasks);
-  handleRemoveTask
-}, []);
+}, []); // Empty dependency array means this effect runs once on mount
 
 useEffect(() => {
+  // Store tasks in localStorage whenever they change
   if (Array.isArray(tasks) && tasks.length) {
     localStorage.setItem("task", JSON.stringify(tasks));
+  } else {
+    // If there are no tasks left, clear the 'task' item from localStorage
+    localStorage.removeItem("task");
   }
-}, [tasks]); 
+}, [tasks]); // This effect runs whenever 'tasks' changes
+
+
 
   return (
     <div className="container">

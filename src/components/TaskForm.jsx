@@ -3,7 +3,7 @@ import { useState } from "react";
 import Button from "./Button";
 
 function TaskForm({ setTasks }) {
-  const tagName = ["html", "css", "javascript", "git", "react"];
+  const tagName = ["Home", "Study", "Health", "Financial", "Hobbies"];
 
   const [taskData, setTaskData] = useState({
     task: "",
@@ -33,10 +33,12 @@ function TaskForm({ setTasks }) {
   }
   function handleSubmit(e) {
     e.preventDefault();
-    // console.log(taskData);
-    setTasks((prev) => {
-      return [...prev, taskData];
-    });
+    if(taskData.task !== "" && taskData.tags != []){
+      setTasks((prev) => {
+        return [...prev, taskData];
+      });
+    }
+    
 
 
     setTaskData({
