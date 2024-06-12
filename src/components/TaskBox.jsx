@@ -1,23 +1,23 @@
 import React from "react";
 import Button from "./Button";
 
-function TaskBox({ task, tags }) {
+function TaskBox({ task, tags, handleRemoveTask, index }) {
   return (
-    <div className="task-box">
+    <article className="task-box">
       <p>{task}</p>
       <div className="box">
         <div className="tags">
-          {tags.map((tag) => (
-            <Button tagName={tag} />
+          {tags.map((tag, index) => (
+            <Button key={index} tagName={tag} checkTags />
           ))}
         </div>
         <div className="del-btn">
-          <button className="delete">
+          <button className="delete" onClick={() => handleRemoveTask(index)}>
             <img src="./delete.png" alt="delete" />
           </button>
         </div>
       </div>
-    </div>
+    </article>
   );
 }
 

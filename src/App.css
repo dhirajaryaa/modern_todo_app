@@ -44,14 +44,12 @@
   all: unset;
   padding: 3px 8px;
   font-size: 0.9rem;
-  background-color: var(--btn-4);
-  border: 1px solid var(--btn-4);
   border-radius: 3px;
   color: var(--focus-light);
   font-weight: 400;
   margin: 0.2rem 0.3rem;
 }
-.btn.html {
+/* .btn.html {
   background-color: var(--btn-2);
   border: 1px solid var(--btn-2);
 }
@@ -66,7 +64,7 @@
 .btn.react {
   background-color: var(--btn-5);
   border: 1px solid var(--btn-5);
-}
+} */
 .header .action-btn select {
   padding: 3px 20px;
   background-color: var(--focus-light);
@@ -84,6 +82,11 @@
   color: var(--body-bg-light);
   border-radius: 3px;
 }
+.header .action-btn .submit:hover {
+  background-color: var(--submit-hover);
+  border: 1px solid var(--submit-hover);
+
+}
 /* .task container  */
 .warper .task-container {
   display: flex;
@@ -99,6 +102,7 @@
   align-items: center;
   justify-content: flex-start;
   gap: 5px;
+  width: 20rem;
   margin: 0 0 0.6rem;
 }
 .warper .task-container .task-list .task-box {
@@ -121,9 +125,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin: 0.5rem 0;
+  /* margin: 0.5rem 0; */
 }
-.warper .task-container .task-list .task-box p{
+.warper .task-container .task-list .task-box p {
   width: 100%;
   font-size: 1rem;
   text-align: left;
@@ -132,17 +136,29 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   flex-direction: row;
   /* gap: 0.2rem; */
 }
 .warper .task-container .task-list .task-box .box .tags .btn {
   margin: 0.3rem;
 }
+
 .warper .task-container .task-list .task-box .box .del-btn .delete {
   all: unset;
-  width: 30px;
+  background-color: var(--focus-light);
+  border-radius: 100%;
+  padding: 7px;
+  display: flex;
+  align-items: center;
+  opacity: 50%;
+  transition: all ease-in-out 0.5s;
 }
+.warper .task-container .task-list .task-box .box .del-btn .delete:hover {
+  background-color: var(--gray-light);
+  opacity: 80%;
+}
+
 .warper .task-container img {
   width: 20px;
   height: 20px;
@@ -168,10 +184,10 @@
 }
 @media only screen and (max-width: 550px) {
   .warper .task-container {
-   margin: 0.5rem 0;
+    margin: 0.5rem auto;
   }
-  .warper .task-container .task-list{
-    margin:  auto;
+  .warper .task-container .task-list {
+    margin: auto;
   }
   .container .warper .header {
     width: 100%;
